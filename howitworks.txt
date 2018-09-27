@@ -1,0 +1,18 @@
+anything in single quotes is a reference to a statement somewhere else in the file
+anything in double quotes tells exactly what it is
+anything after // tells you what the line or statement means
+anything before a := is the title of a statement 
+any overload of a statement or line means that it can be used in all shown ways
+
+*start ['sectionheader'] //declare the start of a section using the section header notation. currently nested sections are not supported.
+*end ["current section title"] //declare the end of the current section. requires the current section title or will error.
+
+sectionheader:=["section title":<"sectiontype">] //basic sectionheader. names a section and declare the kind of data within. sectiontype must be a valid type of data.
+sectionheader:=["section title":<"sectiontype":"descriptivetype">] //allows for data variations. descriptivetype must be in the list of descriptivetypes declared with the sectiontype.
+sectionheader:=["section title":<"sectiontype">&'function_call'] //function called must return boolean value or a request object. useable to order section loading and only load a section on a condition
+sectionheader:=["section title":<"sectiontype":"descriptivetype">&'function_call'] // a combination of the function call and data variations section header statements
+
+<"type"> "variable_name" = "value" // declare and create a variable of type "type" named "variable_name". "value" must be of type "type" or an instance of a subtype that has a cast_conversion function.
+<"type"> "variable_name" = {'function_call'} // give the variable the output of a function_call
+
+function_call:="section to find function in
