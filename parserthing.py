@@ -8,7 +8,7 @@ test_data = """
 *end [variables]
 
 *start [functions:<function_declarations:variants>&require:section(abstracts)]
-#variant<convert@abstracts> string
+#function:variant<convert@abstracts> string
 return arguments.get_item(0).as_string()
 *end [functions]
 
